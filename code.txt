@@ -1,0 +1,51 @@
+programa { 
+  inclua biblioteca Matematica --> m
+
+  funcao inicio() {
+
+    inteiro opc, valor
+
+    escreva("► Digite um valor: R$")
+  
+    leia(valor)
+    limpa()
+
+    escreva("Para qual moeda deseja converter? \n")
+    escreva("-----------------\n")
+    escreva("1 ► Dólar\n")
+    escreva("2 ► Euro\n")
+    escreva("3 ► Franco suíço\n")
+    escreva("-----------------\n")
+    leia(opc)
+    limpa()
+
+    escolha(opc){
+      caso 1:
+        real resultado = valor / 4.87
+        escreva("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n")
+        escreva(" ► R$", valor, " = US$", m.arredondar(resultado, 2), "\n")
+        escreva("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
+      pare
+
+      caso 2:
+        real resultado = valor / 5.19
+        escreva("↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔\n")
+        escreva(" ► R$", valor, " = €", m.arredondar(resultado, 2), "\n")
+        escreva("↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔↔")
+      pare
+
+      caso 3:
+        real resultado = valor / 5.42
+        escreva("⚏⚏⚏⚏⚏⚏⚏⚏⚏⚏⚏⚏\n")
+        escreva(" ► R$", valor, " = ₣", m.arredondar(resultado, 2), "\n")
+        escreva("⚏⚏⚏⚏⚏⚏⚏⚏⚏⚏⚏⚏")
+      pare
+
+      caso contrario
+        escreva("≆≆≆≆≆≆≆≆≆≆≆≆≆≆≆\n")
+        escreva("⭙ Opção inválida ⭙\n")
+        escreva("≆≆≆≆≆≆≆≆≆≆≆≆≆≆≆")
+    }
+
+  }
+}
